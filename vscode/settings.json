@@ -1,0 +1,20 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+   // Controls the rendering size of tabs in characters. Accepted values: "auto", 2, 4, 6, etc. If set to "auto", the value will be guessed when a file is opened.
+   "editor.tabSize": 3,
+   // Controls if the editor will insert spaces for tabs. Accepted values:  "auto", true, false. If set to "auto", the value will be guessed when a file is opened.
+   "editor.insertSpaces": true,
+   "editor.renderWhitespace": true,
+   "javascript.validate.lint.undeclaredVariables": "warning",
+   "javascript.validate.lint.unusedVariables": "warning",
+   // This shit is broken
+   "eslint.enable": false,
+   "eslint.options": {
+      "globals": [
+         "chrome"
+      ],
+      "rules": {
+         "no-unused-vars": 2
+      }
+   }
+}
