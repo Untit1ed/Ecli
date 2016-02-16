@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<style>
+			.red{
+				display:inline-block;
+				width:2em;
+				padding:3px;
+				border-radius:3px;
+				text-align:center;
+				background-color:red;
+				font-weight:bold;
+				color:white;
+			}
+		</style>
+	</head>
+	<body>
+		<span id="counter" class="red">0</span>
+		<script>
+			var red = document.getElementById('counter');
+			var chrome = {
+				contextMenus: {
+					create:function(){}
+				},
+				browserAction:{
+					setIcon:function(){},
+					setBadgeText:function(o){
+						console.log(red);
+						red.innerHTML = o.text;
+					}
+				},
+				extension: {
+					sendMessage:function(){}
+				}
+			};
+		</script>
+		<script src="../js/ecli/Socket.js"></script>
+		<script src="../js/background.js"></script>
+	</body>
+</html>

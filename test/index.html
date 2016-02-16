@@ -1,0 +1,22 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<script>
+			var IFRAME_COUNT = 10;
+			for(var i = 0; i < IFRAME_COUNT; i++){
+				var frame = document.createElement('iframe');
+				frame.src = "counter.html";
+				frame.style.height = '3em';
+				frame.style.width = '3em';
+				frame.style.border = 'none';
+				document.body.appendChild(frame);
+				
+				frame.addEventListener('load', function(){
+					b = this.contentWindow.document.body;
+					this.style.height = this.contentWindow.document.body.style.offsetHeight  + "px";
+				}, false);
+			}
+		</script>
+	</body>
+</html>

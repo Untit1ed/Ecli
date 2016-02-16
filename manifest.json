@@ -1,0 +1,36 @@
+{
+   "manifest_version": 2,
+   "name": "Ecli",
+   "description": "Ecli chrome extension for WP8.1 Bookmarkr app",
+   "version": "0.1.23",
+   "minimum_chrome_version": "49.0",
+   "permissions": [
+      "contextMenus",
+      "storage"
+   ],
+   "browser_action": {
+      "default_icon": "/img/icon_disconnected.png",
+      "default_popup": "popup.html",
+      "default_title": "Ecli"
+   },
+   "options_ui": {
+      "page": "options.html",
+      "chrome_style": true
+   },
+   "background": {
+      "scripts": [
+         "/js/lib/cryptojs.js",
+         "/js/ecli/Socket.js",
+         "/js/ecli/PersistantStorage.js",
+         "/js/ecli/DaVinci.js",
+         "/js/ecli/ContextMenu.js",
+         "/js/ecli/RecordReader.js",
+         "/js/background.js"
+      ]
+   },
+   "icons": {
+      "128": "/img/logo128.png",
+      "16": "/img/logo16.png",
+      "48": "/img/logo48.png"
+   }
+}
